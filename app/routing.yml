@@ -1,5 +1,5 @@
 vinos:
   route: /vinos
   path:
-    namespace: NightStandardEdition\Controller\VinosController
-    method: listVinosAction
+    classname: NightStandardEdition\Controller\VinosController
+    callablemethod: listVinosAction
