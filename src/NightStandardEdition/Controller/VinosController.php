@@ -5,7 +5,8 @@ namespace NightStandardEdition\Controller;
 
 class VinosController
 {
-    public function listVinosAction() {
+    public function listVinosAction()
+    {
         echo "ListVinosAction :D";
     }
 }
