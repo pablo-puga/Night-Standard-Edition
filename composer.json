@@ -1,0 +1,24 @@
+{
+  "name": "pablo-puga/Night-Standard-Edition",
+  "description": "MPWAR Frameworks Application",
+  "license": "Apache-2.0",
+  "keywords": [],
+  "homepage": "https://github.com/pablo-puga/Night-Standard-Edition",
+  "type": "project",
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/pablo-puga/NightFramework"
+    }
+  ],
+  "require": {
+    "php": "^5.6",
+    "pablo-puga/Night": "dev-master"
+  },
+  "minimun-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "NightStandardEdition\\": "src/NightStandardEdition/"
+    }
+  }
+}
