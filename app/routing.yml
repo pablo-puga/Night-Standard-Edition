@@ -1,0 +1,5 @@
+vinos:
+  route: /vinos
+  path:
+    namespace: NightStandardEdition\Controller\VinosController
+    method: listVinosAction
