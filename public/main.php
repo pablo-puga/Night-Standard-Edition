@@ -7,12 +7,11 @@ use Night\Component\Bootstrap\Bootstrap;
 $generalConfigurations = [
     'environment' => Bootstrap::NIGHT_DEVELOPMENT_ENVIRONMENT,
     'configurationsDirectory' => __DIR__ . '/../app',
-    'configurationsFileExtension' => Bootstrap::NIGHT_YAML_FILE_EXTENSION
+    'configurationsFileExtension' => \Night\Component\FileParser\JSONParser::FILE_EXTENSION
 ];
 
 $bootstrap = new Bootstrap($generalConfigurations);
 
-//var_dump($bootstrap());
 $uri        = $_SERVER['REQUEST_URI'];
 $start      = strpos('/MyApp/main.php', $uri) + strlen('/MyApp/main.php');
 $length     = strlen($uri) - $start;
