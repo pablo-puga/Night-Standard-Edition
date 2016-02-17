@@ -6,6 +6,13 @@
       "callablemethod": "listVinosAction"
     }
   },
+  "json": {
+    "route": "/json",
+    "path": {
+      "classname": "NightStandardEdition\\Controller\\TestJsonController",
+      "callablemethod": "testJsonResponseAction"
+    }
+  },
   "notfound": {
     "route": "",
     "path": {
