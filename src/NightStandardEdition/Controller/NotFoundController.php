@@ -3,7 +3,9 @@
 namespace NightStandardEdition\Controller;
 
 
-class NotFoundController
+use Night\Component\Controller\NightController;
+
+class NotFoundController extends NightController
 {
     public function notFoundAction()
     {

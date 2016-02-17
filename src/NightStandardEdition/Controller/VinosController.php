@@ -3,7 +3,9 @@
 namespace NightStandardEdition\Controller;
 
 
-class VinosController
+use Night\Component\Controller\NightController;
+
+class VinosController extends NightController
 {
     public function listVinosAction()
     {
