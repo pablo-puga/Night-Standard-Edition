@@ -3,11 +3,11 @@
 namespace NightStandardEdition\Controller;
 
 
-use Night\Component\Controller\NightController;
+use Night\Component\Request\Request;
 
-class NotFoundController extends NightController
+class NotFoundController
 {
-    public function notFoundAction()
+    public function notFoundAction(Request $request)
     {
         echo "This is not the route you are looking for";
     }
