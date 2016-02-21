@@ -3,6 +3,21 @@ vinos:
   path:
     classname: NightStandardEdition\Controller\VinosController
     callablemethod: listVinosAction
+json:
+  route: /json
+  path:
+    classname: NightStandardEdition\Controller\TestJsonController
+    callablemethod: testJsonResponseAction
+twigTest:
+  route: /twig
+  path:
+    classname: NightStandardEdition\Controller\ComplexController
+    callablemethod: twigTest
+smartyTest:
+  route: /smarty
+  path:
+    classname: NightStandardEdition\Controller\ComplexController
+    callablemethod: smartyTest
 notfound:
   route:
   path:
