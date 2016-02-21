@@ -3,18 +3,25 @@
 require_once __DIR__ . '/../vendor/autoload.php';
 
 use Night\Component\Bootstrap\Bootstrap;
+use Night\Component\Request\Request;
 
 $generalConfigurations = [
     'environment' => Bootstrap::NIGHT_DEVELOPMENT_ENVIRONMENT,
     'configurationsDirectory' => __DIR__ . '/../app',
-    'configurationsFileExtension' => \Night\Component\FileParser\JSONParser::FILE_EXTENSION
+    'configurationsFileExtension' => \Night\Component\FileParser\YAMLParser::FILE_EXTENSION,
+    'templating' => [
+        'engine' => \Night\Component\Templating\SmartyTemplating::ENGINE,
+        'templatesDirectory' => __DIR__ . '/../app/templates'
+    ]
 ];
 
 $bootstrap = new Bootstrap($generalConfigurations);
+$request   = Request::newFromGlobals();
 
-$uri        = $_SERVER['REQUEST_URI'];
-$start      = strpos('/MyApp/main.php', $uri) + strlen('/MyApp/main.php');
-$length     = strlen($uri) - $start;
-$requestURI = substr($uri, $start, $length);
+/**@var $response \Night\Component\Response\Response */
+$response = $bootstrap($request);
+if (is_null($response)) {
+    exit(0);
+}
 
-$bootstrap($requestURI);
+$response->send();
