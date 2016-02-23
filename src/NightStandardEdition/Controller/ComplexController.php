@@ -11,10 +11,11 @@ class ComplexController extends NightController
 {
     public function twigTest(Request $request)
     {
-        $this->templating->setTemplate('hello.twig');
-        $this->templating->setVariable('name', 'Pablo');
-        $this->templating->setVariable('surname', 'Puga');
-        $html = $this->templating->render();
+        $templating = $this->getTemplatingService();
+        $templating->setTemplate('hello.twig');
+        $templating->setVariable('name', 'Pablo');
+        $templating->setVariable('surname', 'Puga');
+        $html = $templating->render();
 
         $response = new Response();
         $response->setContentType('text\html');
@@ -26,10 +27,11 @@ class ComplexController extends NightController
 
     public function smartyTest(Request $request)
     {
-        $this->templating->setTemplate('hello.tpl');
-        $this->templating->setVariable('name', 'Pablo');
-        $this->templating->setVariable('surname', 'Puga');
-        $html = $this->templating->render();
+        $templating = $this->getTemplatingService();
+        $templating->setTemplate('hello.tpl');
+        $templating->setVariable('name', 'Pablo');
+        $templating->setVariable('surname', 'Puga');
+        $html = $templating->render();
 
         $response = new Response();
         $response->setContentType('text\html');
