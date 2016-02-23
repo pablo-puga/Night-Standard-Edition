@@ -7,10 +7,10 @@ use Night\Component\Request\Request;
 
 $generalConfigurations = [
     'environment' => Bootstrap::NIGHT_DEVELOPMENT_ENVIRONMENT,
-    'configurationsDirectory' => __DIR__ . '/../app',
+    'configurationsDirectory' => __DIR__ . '/../app/confs',
     'configurationsFileExtension' => \Night\Component\FileParser\YAMLParser::FILE_EXTENSION,
     'templating' => [
-        'engine' => \Night\Component\Templating\SmartyTemplating::ENGINE,
+        'engine' => \Night\Component\Templating\TwigTemplating::ENGINE,
         'templatesDirectory' => __DIR__ . '/../app/templates'
     ]
 ];
