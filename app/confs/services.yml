@@ -1,0 +1,17 @@
+routing:
+  class: \Night\Component\Routing\Routing
+  arguments:
+    - @yaml-parser
+twig-templating:
+  class: \Night\Component\Templating\TwigTemplating
+  arguments:
+    - @twig-environment
+twig-loader-filesystem:
+  class: \Twig_Loader_Filesystem
+  arguments:
+    - ../app/templates
+  public: false
+twig-environment:
+  class: \Twig_Environment
+  arguments:
+    - @twig-loader-filesystem

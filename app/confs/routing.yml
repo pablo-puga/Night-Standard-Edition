@@ -23,3 +23,13 @@ notfound:
   path:
     classname: NightStandardEdition\Controller\NotFoundController
     callablemethod: notFoundAction
+testOrder1:
+  route: /cine/filtro/{categoria}/{año}
+  path:
+    classname: NightStandardEdition\Controller\OrderTestController
+    callablemethod: twoParamsAction
+testOrder2:
+  route: /cine/filtro/accion/{año}
+  path:
+    classname: NightStandardEdition\Controller\OrderTestController
+    callablemethod: oneParamAction
