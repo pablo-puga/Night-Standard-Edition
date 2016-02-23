@@ -1,0 +1,21 @@
+general:
+  environment: prod
+  routingFileExtension: yml
+templating:
+  twig:
+    templatesDirectory: ../app/templates/twig
+    environmentVariables:
+      debug: true
+  smarty:
+    templatesDirectory: ../app/templates/smarty
+database:
+  pdo:
+    host:
+    password:
+    user:
+    database:
+  doctrine:
+    host:
+    password:
+    user:
+    database:

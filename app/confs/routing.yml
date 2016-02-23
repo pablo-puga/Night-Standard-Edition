@@ -14,7 +14,7 @@ twigTest:
     classname: NightStandardEdition\Controller\ComplexController
     callablemethod: twigTest
 smartyTest:
-  route: /smarty
+  route: /smarty/{nombre}/{apellido}
   path:
     classname: NightStandardEdition\Controller\ComplexController
     callablemethod: smartyTest

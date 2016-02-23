@@ -15,3 +15,8 @@ twig-environment:
   class: \Twig_Environment
   arguments:
     - @twig-loader-filesystem
+db-profiler:
+  class:
+  arguments:
+  tag: profiler-collector
+  singleton: getInstance
