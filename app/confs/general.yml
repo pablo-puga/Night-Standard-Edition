@@ -4,7 +4,7 @@ general:
 templating:
   twig:
     templatesDirectory: ../app/templates/twig
-    cacheDirectory: false
+    cacheDirectory:
     debug: true
   smarty:
     templates:
@@ -21,4 +21,4 @@ database:
     database: world
     user: root
     password:
-    charset: latin1
+    charset: utf8
