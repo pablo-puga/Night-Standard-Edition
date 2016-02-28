@@ -1,0 +1,4 @@
+services-container:
+  class: \Night\Component\Container\ServicesContainer
+  arguments:
+    - @yaml-parser
