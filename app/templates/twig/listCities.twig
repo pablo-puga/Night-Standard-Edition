@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List of Cities in {{ countryCode }}</title>
+        <style>
+            #citiesList td, #citiesList th {
+                padding: 0 5px;
+            }
+            #citiesList tbody tr:nth-child(even) {
+                background-color: lightgrey;
+            }
+            #citiesList tbody tr:nth-child(odd) {
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <html>
+        <div style="text-align: center; width: 100%; height: 100%; font-family: 'Trebuchet MS', Helvetica, sans-serif;">
+            <table id="citiesList" style="display: inline-table;">
+                <thead>
+                    <tr style="background-color: darkgrey;">
+                        <th colspan="3">List of Cities in {{ countryCode }}</th>
+                    </tr>
+                    <tr style="background-color: darkgrey;">
+                        <th>City Name</th>
+                        <th>District</th>
+                        <th>Population</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for city in citiesList %}
+                    <tr>
+                        <td style="text-align: left">{{ city.Name }}</td>
+                        <td style="text-align: left">{{ city.District }}</td>
+                        <td style="text-align: right">{{ city.Population }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </html>
+</html>
