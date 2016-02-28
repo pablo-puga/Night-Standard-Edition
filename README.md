@@ -12,15 +12,9 @@ Installation
 --------------
 To install this application follow the following steps.
 
-**1.** Clone this repo into your server
-```bash
-git clone https://github.com/pablo-puga/Night-Standard-Edition.git
-```
-**2.** Inside the folder Night-Standard-Edition, execute
-```bash
-composer install
-```
-**3.** Create the virtualhosts needed to access the application. A sample configuration can be found in the NightStandardApp-VirtualHosts.conf file. Just make sure that the path to the Night-Standard-Edition/public folder is the proper one to your system.
-**4.** Create the database world into your MySQL server. You can find the dump of the database in the worldDatabase.sql file.
-**5.** Edit the Night-Standard-Edition/app/confs/general.yml and set the proper values for the database > pdo section to connect to the, previously created, world database.
-**6.** Access the application via http://nightstandardapp.com/ or http://nightstandardapp.dev/ to see the profiling information. There you will see a small list of some possible actions to try in the application.
+ 1. Clone this repo into your server `git clone https://github.com/pablo-puga/Night-Standard-Edition.git`
+ 2. Inside the folder Night-Standard-Edition, execute `composer install`
+ 3. Create the virtualhosts needed to access the application. A sample configuration can be found in the NightStandardApp-VirtualHosts.conf file. Just make sure that the path to the Night-Standard-Edition/public folder is the proper one to your system.
+ 4. Create the database world into your MySQL server. You can find the dump of the database in the worldDatabase.sql file.
+ 5. Edit the Night-Standard-Edition/app/confs/general.yml and set the proper values for the database > pdo section to conect to the, previously created, world database.
+ 6. Access the application via http://nightstandardapp.com/ or http://nightstandardapp.dev/ to see the profiling information. There you will see a small list of some posible actions to try in the application.
