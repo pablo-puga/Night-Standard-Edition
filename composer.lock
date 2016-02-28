@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pablo-puga/NightFramework.git",
-                "reference": "9a0bf5350b5eea0f408e16ad8b6f23ba65260f24"
+                "reference": "5310f9cdfb80ad6877ba1e523f6406390e3f7800"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pablo-puga/NightFramework/zipball/9a0bf5350b5eea0f408e16ad8b6f23ba65260f24",
-                "reference": "9a0bf5350b5eea0f408e16ad8b6f23ba65260f24",
+                "url": "https://api.github.com/repos/pablo-puga/NightFramework/zipball/5310f9cdfb80ad6877ba1e523f6406390e3f7800",
+                "reference": "5310f9cdfb80ad6877ba1e523f6406390e3f7800",
                 "shasum": ""
             },
             "require": {
@@ -48,7 +48,7 @@
                 "source": "https://github.com/pablo-puga/NightFramework/tree/master",
                 "issues": "https://github.com/pablo-puga/NightFramework/issues"
             },
-            "time": "2016-02-28 19:59:08"
+            "time": "2016-02-28 20:58:46"
         },
         {
             "name": "smarty/smarty",
