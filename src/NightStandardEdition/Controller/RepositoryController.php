@@ -6,6 +6,7 @@ namespace NightStandardEdition\Controller;
 use Night\Component\Controller\NightController;
 use Night\Component\Repository\PDORepository;
 use Night\Component\Request\Request;
+use Night\Component\Response\JSONResponse;
 use Night\Component\Response\Response;
 
 class RepositoryController extends NightController
@@ -30,6 +31,22 @@ class RepositoryController extends NightController
         $response->setResponseStatus(200, 'OK');
         $response->setContentType('text/html; charset=utf-8');
         $response->setContent($html);
+        return $response;
+    }
+
+    public function listCitiesFromCountryCodeActionJSON(Request $request)
+    {
+        $countryCode   = $request->route->getParam('countryCode');
+        $pdoRepository = $this->getServicesContainer()->getService('pdo-repository');
+        $statement     = "SELECT Name, District, Population FROM City WHERE City.CountryCode = :countryCode ORDER BY City.Name;";
+        $pdoRepository->setStatement($statement);
+        $pdoRepository->setParam(':countryCode', $countryCode, PDORepository::PARAM_STR);
+        $pdoRepository->executeStatement();
+        $cities = $pdoRepository->getResults();
+
+        $response = new JSONResponse();
+        $response->setResponseStatus(200, 'OK');
+        $response->setContent($cities);
         return $response;
     }
 }
