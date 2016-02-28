@@ -4,18 +4,21 @@ general:
 templating:
   twig:
     templatesDirectory: ../app/templates/twig
-    environmentVariables:
-      debug: true
+    cacheDirectory: false
+    debug: true
   smarty:
-    templatesDirectory: ../app/templates/smarty
+    templates:
+      directory: ../app/templates/smarty
+    compilation:
+      directory: cache/smarty/compilations
+    cache:
+      enable: false
+      lifeTime: 300
+      directory: cache/smarty
 database:
   pdo:
-    host:
+    host: localhost
+    database: world
+    user: root
     password:
-    user:
-    database:
-  doctrine:
-    host:
-    password:
-    user:
-    database:
+    charset: latin1
