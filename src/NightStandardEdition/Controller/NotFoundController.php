@@ -3,13 +3,21 @@
 namespace NightStandardEdition\Controller;
 
 
-use Night\Component\Request\Request;
+use Night\Component\Controller\NightController;
+use Night\Component\Response\Response;
 
-class NotFoundController
+class NotFoundController extends NightController
 {
-    public function notFoundAction(Request $request)
+    public function notFoundAction()
     {
-        echo "This is not the route you are looking for";
+        $twigTemplating = $this->getServicesContainer()->getService('twig-templating');
+        $twigTemplating->setTemplate('notFound.twig');
+        $html = $twigTemplating->render();
+
+        $response = new Response();
+        $response->setResponseStatus(404, 'Not Found');
+        $response->setContent($html);
+        return $response;
     }
 }
 
