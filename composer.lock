@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/pablo-puga/NightFramework.git",
-                "reference": "6e78ec5e7c36ab45047b76da768cc1c5d8ffa4cc"
+                "reference": "9a0bf5350b5eea0f408e16ad8b6f23ba65260f24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pablo-puga/NightFramework/zipball/6e78ec5e7c36ab45047b76da768cc1c5d8ffa4cc",
-                "reference": "6e78ec5e7c36ab45047b76da768cc1c5d8ffa4cc",
+                "url": "https://api.github.com/repos/pablo-puga/NightFramework/zipball/9a0bf5350b5eea0f408e16ad8b6f23ba65260f24",
+                "reference": "9a0bf5350b5eea0f408e16ad8b6f23ba65260f24",
                 "shasum": ""
             },
             "require": {
@@ -45,10 +45,10 @@
             "description": "MPWAR Framework",
             "homepage": "https://github.com/pablo-puga/NightFramework",
             "support": {
-                "source": "https://github.com/pablo-puga/NightFramework/tree/v1.0.0",
+                "source": "https://github.com/pablo-puga/NightFramework/tree/master",
                 "issues": "https://github.com/pablo-puga/NightFramework/issues"
             },
-            "time": "2016-02-28 18:44:45"
+            "time": "2016-02-28 19:59:08"
         },
         {
             "name": "smarty/smarty",
